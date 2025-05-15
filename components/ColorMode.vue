@@ -1,6 +1,7 @@
 <template>
     <div relative>
-        <span i-carbon-light @click="toggleDark" />
+        <span i-carbon-light @click="toggleDark" v-if="colorMode.value === 'light'" />
+        <span i-carbon-moon  @click="toggleDark" v-else-if="colorMode.value === 'dark'" />
     </div>
 </template>
 

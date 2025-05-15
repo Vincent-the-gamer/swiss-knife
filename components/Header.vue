@@ -1,8 +1,11 @@
 <template>
     <header fixed z-5 m-0 top-0 left-0 w-full>
-        <div absolute h-full w-fit flex="~ row items-center justify-center">
+        <div class="title" absolute h-full w-fit flex="~ row items-center justify-center">
             <img relative h-13 m-0 src="~/assets/img/swiss-knife.png" alt="logo" />
             <span relative font-size-7 m-inline-2>Swiss Knife</span>
+            <NuxtLink to="/" ml-2>
+                <span class="home" bg-white dark:bg-black>Home</span>
+            </NuxtLink>
         </div>
         <div absolute top-0 right-4 m-0 h-full font-size-30px flex="~ row items-center justify-center gap-3.5">
             <a class="logo" href="https://github.com/Vincent-the-gamer" target="_blank">
@@ -22,13 +25,7 @@ $header-height: 3.8rem;
 
 header {
     background-color: rgb(240, 240, 240);
-
-    .dark-mode & {
-        background-color: rgb(24, 24, 24);
-        .gh-logo {
-            color: white;
-        }
-    }
+    color: black;
 
     height: $header-height;
 
@@ -42,10 +39,37 @@ header {
     .logo {
         transition: all, 200ms;
         cursor: pointer;
+
         &:hover {
             color: deeppink;
         }
     }
 }
 
+.dark-mode header {
+    background-color: rgb(24, 24, 24);
+    color: white;
+
+    .gh-logo {
+        color: white;
+    }
+}
+
+.title * {
+    color: black;
+}
+
+.dark-mode .title * {
+    color: white;
+}
+
+span.home {
+    padding: 0.3rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: deeppink;
+    }
+}
 </style>
