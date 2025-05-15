@@ -26,10 +26,6 @@ export default defineConfig({
             ([_, fontFamily]) => ({ "font-family": fontFamily })
         ],
         [
-            /^hearth-stroke-([\.\d]+)px$/,
-            ([_, size]) => ({ "text-shadow": `-${size}px -${size}px 0 black, ${size}px -${size}px 0 black, -${size}px ${size}px 0 black, ${size}px ${size}px 0 black` })
-        ],
-        [
             /^white-space-([a-zA-Z_-]+)$/,
             ([_, whiteSpace]) => ({ "white-space": whiteSpace })
         ],
@@ -40,16 +36,8 @@ export default defineConfig({
     ],
     shortcuts: [
         { 
-            "button": `bg-transparent border-rd-4px
-            border-1px border-solid transition-all-250 hover:cursor-pointer` 
+            "btn": `bg-gray-800 border-2px border-solid border-white color-white p-2
+            border-rd-2.5 hover:bg-pink` 
         },
-        {
-            "select": `bg-transparent border-rd-4px border-1px border-solid
-             w-90px h-30px font-family-BlizzardGlobal`
-        },
-        {
-            "input-text": `bg-transparent w-200px h-30px border-1px 
-            border-solid border-rd-5px font-family-BlizzardGlobal`
-        }
     ]
 })

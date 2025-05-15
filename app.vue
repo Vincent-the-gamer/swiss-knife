@@ -2,6 +2,12 @@
   <div>
     <NuxtRouteAnnouncer />
     <Header />
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+    <Footer />
   </div>
 </template>
+
+<script setup lang="ts">
+</script>
